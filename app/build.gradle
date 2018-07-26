@@ -54,12 +54,26 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
 
     // This library handles authentication and authorization
-    compile 'com.spotify.android:auth:1.0.0-alpha'
+    implementation 'com.spotify.android:auth:1.0.0-alpha'
 
     // This library handles music playback
-    compile 'com.spotify.sdk:spotify-player-24-noconnect-2.20b@aar'
+    implementation 'com.spotify.sdk:spotify-player-24-noconnect-2.20b@aar'
+
+//    compile fileTree(include: ['*.jar'], dir: 'libs')
+//    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+//    compile project(':spotify-app-remote-release-0.4.0')
+//
+//    // This library handles authentication and authorization
+//    compile 'com.spotify.android:auth:1.0.0-alpha'
+//
+//    // This library handles music playback
+//    compile 'com.spotify.sdk:spotify-player-24-noconnect-2.20b@aar'
+//
+//    compile project(':spotify-app-remote-release-0.4.0')
+//    compile "com.google.code.gson:gson:2.6.1"
 }

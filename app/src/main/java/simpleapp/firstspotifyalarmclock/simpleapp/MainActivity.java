@@ -25,7 +25,6 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 import java.util.Calendar;
 
-
 public class MainActivity extends Activity implements
         SpotifyPlayer.NotificationCallback, ConnectionStateCallback
 {
@@ -51,7 +50,7 @@ public class MainActivity extends Activity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        alarmTimePicker = (TimePicker) findViewById(R.id.timePicker);
+        alarmTimePicker = (TimePicker)findViewById(R.id.timePicker);
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
         // The only thing that's different is we added the 5 lines below.
@@ -174,6 +173,9 @@ public class MainActivity extends Activity implements
     }
 
     public static void testingPlay(){
-        mPlayer.playUri(null, "spotify:user:12172876507:playlist:4pJrgy05BSy28mEeylQdI0", 0, 0);
+        int i = (int)(Math.random()*283);
+        mPlayer.setShuffle(null, true);
+        mPlayer.playUri(null, "spotify:user:12172876507:playlist:4pJrgy05BSy28mEeylQdI0", i, 0);
+        mPlayer.skipToNext(null);
     }
 }
